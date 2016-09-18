@@ -43,23 +43,22 @@ class fileConversion {
 				// adds elements from txt to array
 				for (int i = 0; i < 75; i++) {
 					inputDATA[i] = scanRecord.next().trim();
-//					System.out.println(inputDATA[i]);
+					//					System.out.println(inputDATA[i]);
 
 					if (!in.hasNext()) {
 						break;
 					}
 				}
 				inputDATA[76] = "null";
-//				System.out.println("counter = " + counter);
+				//				System.out.println("counter = " + counter);
 				trans1.callsALLtransformations();
-//				if(!Validate.validate(inputDATA)){
-//					
-//				}
-//					System.out.println("counter is" + counter);
-//				if (counter >100){
-//					break;
-//				}
+
+				if(!Validate.validate(inputDATA)){
+					continue;
+				}
 				
+			
+
 				// creating array with correct order
 				orderedOutput[0] = inputDATA[5];
 				for (int j = 1; j < 5; j++) {
@@ -81,9 +80,9 @@ class fileConversion {
 				orderedOutput[32] = "null";
 				for (int p = 33; p < 63; p++) {
 					orderedOutput[p] = inputDATA[p + 12];
-//					System.out.println(orderedOutput[p]);
+					//					System.out.println(orderedOutput[p]);
 				}
-//				System.out.println("gets heree");
+				//				System.out.println("gets heree");
 				// for (int o = 0; o < 39; o++) {
 				// System.out.println(orderedOutput[o]);
 				// }
@@ -92,19 +91,21 @@ class fileConversion {
 						orderedOutput[i] = "null";
 					}
 				}
-				
+
 				// System.out.println("prints " + orderedOutput[i] + "to xml");
 
-			process(orderedOutput);
-//			printSpeed();
-//			counter++;
+				process(orderedOutput);
+				//			printSpeed();
+				//			counter++;
 			}
 			System.out.println("counter is" + counter);
 			closeXml();
 			final long endTime = System.currentTimeMillis();
 
 			System.out.println("Total execution time: " + (endTime - startTime) + "miliseconds." );
-		} catch (Exception e) {
+
+		}
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -138,10 +139,10 @@ class fileConversion {
 				"OtherSubscriberNameSuffix", "OtherSubscriberAddress1", "OtherSubscriberAddress2",
 				"OtherSubscriberCity", "OtherSubscriberState", "OtherSubscriberPostal", "OtherSubscriberZip",
 				"ServiceStartDate", "ServiceEndDate", "Code", "Qualifier", "DeleteFlag" };
-//		th.startElement(null, null, "ClientID", null);
-//		th.startElement(null, null, "Claims", null);
+		//		th.startElement(null, null, "ClientID", null);
+		//		th.startElement(null, null, "Claims", null);
 		int i = 0;
-		
+
 		while (i < 31) {
 			if (i == 0) {
 				th.startElement(null, null, "Claim", null);
@@ -165,42 +166,42 @@ class fileConversion {
 		int a = 32;
 		while (a < 61) {
 			th.startElement(null, null, "Diagnosis", null);
-			
+
 			th.startElement(null, null, xmlTAGS[31], null);
 			th.characters(s[a].toCharArray(), 0, s[a].length());
 			th.endElement(null, null, xmlTAGS[31]);
-			
+
 			th.startElement(null, null, xmlTAGS[32], null);
 			th.characters(s[a+1].toCharArray(), 0, s[a+1].length());
 			th.endElement(null, null, xmlTAGS[32]);
-			
+
 			th.startElement(null, null, xmlTAGS[33], null);
 			th.characters(s[a+2].toCharArray(), 0, s[a+2].length());
 			th.endElement(null, null, xmlTAGS[33]);
-			
+
 			th.endElement(null, null, "Diagnosis");
 			a = a+3;
 		}
 		th.endElement(null, null, "Claim");
-//		th.endElement(null, null, "Claims");
-//		th.endElement(null, null, "ClientID");
-//		for (int n = 32; n < 63;) {
-//			th.startElement(null, null, "Diagnosis", null);
-//			
-//			th.startElement(null, null, "Code", null);
-//			th.characters(s[n].toCharArray(), 0, s[n].length());
-//			th.endElement(null, null, "Code");
-//			n++;
-//			th.startElement(null, null, "Qualifier", null);
-//			th.characters(s[n+1].toCharArray(), 0, s[n+1].length());
-//			th.endElement(null, null, "Qualifier");
-//			n++;
-//			th.startElement(null, null, "DeleteFlag", null);
-//			th.characters(s[n+2].toCharArray(), 0, s[n+2].length());
-//			th.endElement(null, null, "DeleteFlag");
-//			n++;
-//			th.endElement(null, null, "Diagnosis");
-//		}
+		//		th.endElement(null, null, "Claims");
+		//		th.endElement(null, null, "ClientID");
+		//		for (int n = 32; n < 63;) {
+		//			th.startElement(null, null, "Diagnosis", null);
+		//			
+		//			th.startElement(null, null, "Code", null);
+		//			th.characters(s[n].toCharArray(), 0, s[n].length());
+		//			th.endElement(null, null, "Code");
+		//			n++;
+		//			th.startElement(null, null, "Qualifier", null);
+		//			th.characters(s[n+1].toCharArray(), 0, s[n+1].length());
+		//			th.endElement(null, null, "Qualifier");
+		//			n++;
+		//			th.startElement(null, null, "DeleteFlag", null);
+		//			th.characters(s[n+2].toCharArray(), 0, s[n+2].length());
+		//			th.endElement(null, null, "DeleteFlag");
+		//			n++;
+		//			th.endElement(null, null, "Diagnosis");
+		//		}
 
 	}
 
@@ -219,6 +220,6 @@ class fileConversion {
 			c = System.currentTimeMillis();
 		}
 	}
-	
+
 
 }
