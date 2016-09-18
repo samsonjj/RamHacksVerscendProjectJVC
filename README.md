@@ -9,7 +9,7 @@ The program must execute the following:
  <br> ☐☐ 200,000 claims txt file enclosed in RamHacksResources Folder</br>
  <br> ☐☐ PDFs</br>
 <br><b>The data set is evaluated against a set of criteria, provided in the input files.</b></br>
- <br> ☐☐ Validation rules</br>
+ <br> ☑☐ Validation rules</br>
  <br> ☐☐V alidation reference sheets (PDFs in RamHacksResources folder)</br>
 <br><b>The data set is adjusted against a set of entry criteria, provided in the input files.</b></br>
  <br> ☐☐ Transformation rules</br>
