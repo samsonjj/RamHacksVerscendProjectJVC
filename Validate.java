@@ -240,7 +240,9 @@ public class Validate {
 		if(year1 < 2004 || year1 > 2016) {
 			return false;
 		}
+		System.out.println(year1);
 		int index = Arrays.binarySearch(CodeSets.DCP_CODES, year1 + "", FIRST_WORD_COMPARATOR);
+		if(index < 0) return false;
 		Scanner sc = new Scanner(CodeSets.DCP_CODES[index]);
 		int year2 = 1, month2 = 1, day2 = 1;
 		sc.next();
