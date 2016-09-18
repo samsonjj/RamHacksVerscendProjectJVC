@@ -31,12 +31,12 @@ public class Validate {
 					scannerOne.next();
 				}
 			}
-		
+
 			return scannerOne.next().compareToIgnoreCase(two);
 		}
 	};
 	/*public static final Comparator<String> THIRD_WORD_COMPARATOR = new Comparator<String>() {
-		
+
 		public int compare(String one, String two) {
 			Scanner scannerOne = new Scanner(one);
 			Scanner scannerTwo = new Scanner(two);
@@ -115,7 +115,7 @@ public class Validate {
 			return false;
 		}
 		return true;
-				
+
 	}
 	public static boolean validateRule1(String[] claimFields) {
 
@@ -183,9 +183,9 @@ public class Validate {
 		int year = 0;
 		int month = 0;
 		int day = 0;
-		
+
 		System.out.println(claimFields[43]);
-		
+
 		try{
 			century = Integer.parseInt(claimFields[43].substring(0, 2));
 			System.out.println(century);
@@ -277,17 +277,21 @@ public class Validate {
 			return false;
 		}
 
-		for(int i = 0; i < 10; i++) 
-		if(year1 < 2015){
-			if(claimFields[46].substring(0, 1).equals("B")) return true;
+		for(int i = 0; i < 10; i++) {
+			if(year1 < 2015){
+				if(!claimFields[46 + i * 3].substring(0, 1).equals("B"))
+				{
+					return false;
+				}
+			}
+			else if(year1 == 2015 && month1 < 10){
+				if(!claimFields[46 + i * 3].substring(0, 1).equals("B")) return false;
+			}
+			else if(!claimFields[46 + i * 3].substring(0, 1).equals("A")) return false;
 		}
-		if(year1 == 2015 && month1 < 10){
-			if(claimFields[46].substring(0, 1).equals("B")) return true;
-		}
-		if(claimFields[46].substring(0, 1).equals("A")) return true;
-		return false;
+		return true;
 	}
-	
+
 	public static int binarySearch(String[] a, String key, Comparator<String> c) {
 		int start = 1;
 		int end = a.length;
@@ -308,7 +312,7 @@ public class Validate {
 		}
 		return -1;
 	}
-	
+
 	public static int search(String[] a, String key, Comparator<String> c) {
 		for(int i = 1; i < a.length; i++) {
 			if(c.compare(a[i], key) == 0) {
