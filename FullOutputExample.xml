@@ -1,6 +1,6 @@
 <?xml version="1.0"
       encoding="utf-8"?>
-      
+
 <Client>
   <ClientID>temporary</ClientID>
   <Claims>
@@ -50,6 +50,46 @@
               <Code>BF</Code>
               <Qualifier>1</Qualifier>
               <DeleteFlag>9363</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
             </Diagnosis>
           </Diagnoses>
         </DiagnosisType>
@@ -102,6 +142,47 @@
               <Qualifier>1</Qualifier>
               <DeleteFlag>85229</DeleteFlag>
             </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			<Diagnosis>
+              <Code>BF</Code>
+              <Qualifier>1</Qualifier>
+              <DeleteFlag>85229</DeleteFlag>
+            </Diagnosis>
+			
           </Diagnoses>
         </DiagnosisType>
       </DiagnosisTypes>
